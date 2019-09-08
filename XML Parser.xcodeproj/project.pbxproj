@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		692188D92325650200877973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692188D82325650200877973 /* AppDelegate.swift */; };
-		692188DB2325650200877973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692188DA2325650200877973 /* ViewController.swift */; };
 		692188DE2325650400877973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692188DC2325650400877973 /* Main.storyboard */; };
 		692188E02325650B00877973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692188DF2325650B00877973 /* Assets.xcassets */; };
 		692188E32325650B00877973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692188E12325650B00877973 /* LaunchScreen.storyboard */; };
+		692188EF232567AB00877973 /* top-10000-new_products_20190908_183352.xml in Resources */ = {isa = PBXBuildFile; fileRef = 692188EE232567AB00877973 /* top-10000-new_products_20190908_183352.xml */; };
+		692188F1232567FF00877973 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692188F0232567FF00877973 /* RootTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		692188D52325650200877973 /* XML Parser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XML Parser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		692188D82325650200877973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		692188DA2325650200877973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		692188DD2325650400877973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		692188DF2325650B00877973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		692188DF2325650B00877973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		692188E22325650B00877973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		692188E42325650B00877973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		692188EE232567AB00877973 /* top-10000-new_products_20190908_183352.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "top-10000-new_products_20190908_183352.xml"; sourceTree = "<group>"; };
+		692188F0232567FF00877973 /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		692188D72325650200877973 /* XML Parser */ = {
 			isa = PBXGroup;
 			children = (
-				692188D82325650200877973 /* AppDelegate.swift */,
-				692188DA2325650200877973 /* ViewController.swift */,
-				692188DC2325650400877973 /* Main.storyboard */,
-				692188DF2325650B00877973 /* Assets.xcassets */,
-				692188E12325650B00877973 /* LaunchScreen.storyboard */,
-				692188E42325650B00877973 /* Info.plist */,
+				692188EB232565A100877973 /* App */,
+				692188ED2325670100877973 /* Resources */,
+				692188EC232565C400877973 /* View Controllers */,
+				692188EA2325657F00877973 /* Views */,
 			);
 			path = "XML Parser";
+			sourceTree = "<group>";
+		};
+		692188EA2325657F00877973 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				692188DC2325650400877973 /* Main.storyboard */,
+				692188E12325650B00877973 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		692188EB232565A100877973 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				692188D82325650200877973 /* AppDelegate.swift */,
+				692188E42325650B00877973 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		692188EC232565C400877973 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				692188F0232567FF00877973 /* RootTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		692188ED2325670100877973 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				692188DF2325650B00877973 /* Assets.xcassets */,
+				692188EE232567AB00877973 /* top-10000-new_products_20190908_183352.xml */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				692188E32325650B00877973 /* LaunchScreen.storyboard in Resources */,
+				692188EF232567AB00877973 /* top-10000-new_products_20190908_183352.xml in Resources */,
 				692188E02325650B00877973 /* Assets.xcassets in Resources */,
 				692188DE2325650400877973 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				692188DB2325650200877973 /* ViewController.swift in Sources */,
 				692188D92325650200877973 /* AppDelegate.swift in Sources */,
+				692188F1232567FF00877973 /* RootTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +320,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8J39KF9DMS;
-				INFOPLIST_FILE = "XML Parser/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/XML Parser/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +339,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8J39KF9DMS;
-				INFOPLIST_FILE = "XML Parser/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/XML Parser/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
