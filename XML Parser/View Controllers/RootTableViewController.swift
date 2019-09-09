@@ -60,7 +60,7 @@ class RootTableViewController: UITableViewController {
             }
             
             parser.delegate = self
-//            parser.parse()
+            parser.parse()
         }
     }
 }
