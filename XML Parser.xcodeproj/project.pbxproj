@@ -13,6 +13,9 @@
 		692188E32325650B00877973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692188E12325650B00877973 /* LaunchScreen.storyboard */; };
 		692188EF232567AB00877973 /* top-10000-new_products_20190908_183352.xml in Resources */ = {isa = PBXBuildFile; fileRef = 692188EE232567AB00877973 /* top-10000-new_products_20190908_183352.xml */; };
 		692188F1232567FF00877973 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692188F0232567FF00877973 /* RootTableViewController.swift */; };
+		695F690C23257A7A0056D630 /* osnovnoi-vse-razmery_products_20190908_190738.xml in Resources */ = {isa = PBXBuildFile; fileRef = 695F690B23257A7A0056D630 /* osnovnoi-vse-razmery_products_20190908_190738.xml */; };
+		69A3989E2326BFE600A92CA2 /* BundleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A3989D2326BFE600A92CA2 /* BundleManager.swift */; };
+		69A398A12326C8A400A92CA2 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A398A02326C8A400A92CA2 /* FileManager+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		692188E42325650B00877973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		692188EE232567AB00877973 /* top-10000-new_products_20190908_183352.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "top-10000-new_products_20190908_183352.xml"; sourceTree = "<group>"; };
 		692188F0232567FF00877973 /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
+		695F690B23257A7A0056D630 /* osnovnoi-vse-razmery_products_20190908_190738.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "osnovnoi-vse-razmery_products_20190908_190738.xml"; sourceTree = "<group>"; };
+		69A3989D2326BFE600A92CA2 /* BundleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleManager.swift; sourceTree = "<group>"; };
+		69A398A02326C8A400A92CA2 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				692188EB232565A100877973 /* App */,
+				69A3989C2326BFBF00A92CA2 /* Managers */,
+				69A3989F2326C88900A92CA2 /* Extensions */,
 				692188ED2325670100877973 /* Resources */,
 				692188EC232565C400877973 /* View Controllers */,
 				692188EA2325657F00877973 /* Views */,
@@ -93,10 +101,35 @@
 		692188ED2325670100877973 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				695F690A23257A310056D630 /* XML */,
 				692188DF2325650B00877973 /* Assets.xcassets */,
-				692188EE232567AB00877973 /* top-10000-new_products_20190908_183352.xml */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		695F690A23257A310056D630 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				695F690B23257A7A0056D630 /* osnovnoi-vse-razmery_products_20190908_190738.xml */,
+				692188EE232567AB00877973 /* top-10000-new_products_20190908_183352.xml */,
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
+		69A3989C2326BFBF00A92CA2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				69A3989D2326BFE600A92CA2 /* BundleManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		69A3989F2326C88900A92CA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				69A398A02326C8A400A92CA2 /* FileManager+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				692188E32325650B00877973 /* LaunchScreen.storyboard in Resources */,
+				695F690C23257A7A0056D630 /* osnovnoi-vse-razmery_products_20190908_190738.xml in Resources */,
 				692188EF232567AB00877973 /* top-10000-new_products_20190908_183352.xml in Resources */,
 				692188E02325650B00877973 /* Assets.xcassets in Resources */,
 				692188DE2325650400877973 /* Main.storyboard in Resources */,
@@ -171,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A3989E2326BFE600A92CA2 /* BundleManager.swift in Sources */,
+				69A398A12326C8A400A92CA2 /* FileManager+Extension.swift in Sources */,
 				692188D92325650200877973 /* AppDelegate.swift in Sources */,
 				692188F1232567FF00877973 /* RootTableViewController.swift in Sources */,
 			);

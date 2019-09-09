@@ -11,12 +11,13 @@ import UIKit
 class RootTableViewController: UITableViewController {
     
     // MARK: - Stored Properties
-    let fileName = "top-10000-new_products_20190908_183352"
+    let bundleManager = BundleManager()
     let fileExtension = "xml"
     
     var content = ""
     var elementLevel = 0
     var elements = Set<String>()
+    var fileNames = [String]()
     var printContent = false
     
     // MARK: - Computed Properties
@@ -42,20 +43,25 @@ class RootTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = Bundle.main.url(forResource: fileName, withExtension: fileExtension)
+        fileNames = bundleManager.getFileNames(with: fileExtension)
+        print(#line, #function, fileNames)
         
-        guard let xmlURL = url else {
-            print(#line, #function, "ERROR: Can't find \(fileName).\(fileExtension) in main bundle")
-            return
+        for fileName in fileNames {
+            let url = Bundle.main.url(forResource: fileName, withExtension: nil)
+            
+            guard let xmlURL = url else {
+                print(#line, #function, "ERROR: Can't find \(fileName) in main bundle")
+                return
+            }
+            
+            guard let parser = XMLParser(contentsOf: xmlURL) else {
+                print(#line, #function, "ERROR: Can't parse XML file at \(xmlURL.path)")
+                return
+            }
+            
+            parser.delegate = self
+//            parser.parse()
         }
-        
-        guard let parser = XMLParser(contentsOf: xmlURL) else {
-            print(#line, #function, "ERROR: Can't parse XML file at \(xmlURL.path)")
-            return
-        }
-        
-        parser.delegate = self
-        parser.parse()
     }
 }
 
@@ -83,5 +89,18 @@ extension RootTableViewController: XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         let trimmedString = string.trimmingCharacters(in: .whitespacesAndNewlines)
         content = "\(content)\(trimmedString)"
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension RootTableViewController /*: UITableViewDataSource */ {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return fileNames.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = fileNames[indexPath.row]
+        return cell
     }
 }
